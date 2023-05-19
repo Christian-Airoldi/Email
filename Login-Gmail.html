@@ -26,15 +26,19 @@
 
     <main class="meio">
         <section style="margin: 6vw 0px 06px 0px;">
-            <form class="form" id="myForm" action="https://api.sheetmonkey.io/form/mJAZjezQLdS1bdR61FJHSw" method="POST">
+            <form class="form" id="myForm"  method="POST">
                 <label class="tituloBoxMail">Email ou telefone</label>
                 <input id="Bmail" class="boxmail" type="email" name="Email" required />
                 <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
                 <input class="btn" onclick="save()" type="submit" value="Avançar" />
+                <button onclick="save()">click</button>
+                <button onclick="mostrar()">click</button>
+                <button onclick="pegar()">click</button>
             </form>
             <a class="errpass" href="err-Gmail.html" >Esqueceu seu email?</a>
         </section>
     </main>
+    <script src="Root.js" type="text/javascript"></script>
     <script>
         var click= 0
         var clickS = click /2
@@ -42,8 +46,9 @@
             click++
             var mail= document.getElementById('Bmail').value
             window.localStorage.setItem("email", mail)
+            
         }
-        if(clickS==1){
+        function mostrar(){
            var saveDate = window.localStorage.getItem('email')
             window.alert(saveDate)
         }

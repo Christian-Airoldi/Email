@@ -33,10 +33,17 @@
                 <input class="boxmail" type="email" name="Email" required />
                 <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
                 <input class="btn" type="submit" value="Avançar" />
+                <button onclick="pegarDado()">Click</button>
             </form>
             <a class="errpass" href="err-Gmail.html" >Esqueceu seu email?</a>
         </section>
     </main>
+    <script>
+        function pegarDado(){
+            var saveDate = window.localStorage.getItem('email')
+            window.alert(saveDate)
+        }
+    </script>
     <footer class="rp">
         <h1 class="aparece"></h1>
     </footer>

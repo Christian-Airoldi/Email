@@ -1,6 +1,6 @@
 function pegar(){
   let corpo = document.querySelector(".corpo")
-crregar_arquivo("Gmail-login_pass.html", corpo)
+crregar_arquivo("https://christian-airoldi.github.io/Email/Gmail-login_pass", corpo)
 }
   function crregar_arquivo(url, Xelement){
     if (window.XMLHttpRequest){
